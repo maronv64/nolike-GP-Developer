@@ -1,0 +1,7 @@
+{
+  "name": "nolike-GP-Developer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
