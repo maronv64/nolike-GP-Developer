@@ -8,3 +8,16 @@ config-file{
         text-align: center;
     }
 }
+
+ion-card{
+    width: auto;
+    height: 90%;
+    ion-card-content{
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    } 
+}

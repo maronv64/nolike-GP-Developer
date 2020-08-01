@@ -14,6 +14,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/database'; //realtime
 import { environment } from '../environments/environment';
 
 import { Camera } from "@ionic-native/camera/ngx";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,8 @@ import { Camera } from "@ionic-native/camera/ngx";
     BrowserModule, IonicModule.forRoot(), AppRoutingModule
     ,AngularFireModule.initializeApp(environment.firebaseConfig)
     ,AngularFireDatabaseModule
+    ,FormsModule
+    ,ReactiveFormsModule
   ],
   providers: [
     StatusBar,

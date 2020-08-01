@@ -4,10 +4,12 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <config-file parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
-    <div>
-      <string>You can take photos</string>
-    </div>
-   </config-file>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+      <div>
+        <img [src]="selectedPhoto" alt="">
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
