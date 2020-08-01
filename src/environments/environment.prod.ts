@@ -10,3 +10,5 @@ export const environment = {
     appId: "1:972104619745:web:16ad5936e2283ccd5649a0"
   },
 };
+
+export const imageIcon = "https://www.onlygfx.com/wp-content/uploads/2017/12/grunge-yes-no-icon-6-1024x1022.png";

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { imageIcon } from "../../../environments/environment";
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -26,5 +28,7 @@ export class LoginPage implements OnInit {
   login(){
     this.router.navigateByUrl('/tabs/home');
   }
+
+  image:string = imageIcon;
 
 }

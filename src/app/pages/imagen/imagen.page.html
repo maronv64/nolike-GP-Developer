@@ -5,10 +5,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-fab vertical="center" horizontal="center" slot="fixed">
+    
+    <ion-fab-button><ion-icon name="image"></ion-icon></ion-fab-button>
+
+    <ion-fab-list side="start">
+      <ion-fab-button><ion-icon name="camera"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="end">
+      <ion-fab-button><ion-icon name="documents"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  
   <ion-card>
     <ion-card-content>
       <div>
-        <img [src]="selectedPhoto" alt="">
+        <img [src]="selectedPhoto || image" alt="">
       </div>
     </ion-card-content>
   </ion-card>

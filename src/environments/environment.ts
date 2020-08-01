@@ -15,6 +15,8 @@ export const environment = {
   },
 };
 
+export const imageIcon = "https://www.onlygfx.com/wp-content/uploads/2017/12/grunge-yes-no-icon-6-1024x1022.png";
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

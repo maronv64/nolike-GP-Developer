@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { LoadingController } from '@ionic/angular';
+import { imageIcon } from 'src/environments/environment';
 
 @Component({
   selector: 'app-imagen',
@@ -11,6 +12,8 @@ import { LoadingController } from '@ionic/angular';
 
 
 export class ImagenPage implements OnInit {
+
+  image:string = imageIcon;
 
   selectedPhoto;
   currentImage;
