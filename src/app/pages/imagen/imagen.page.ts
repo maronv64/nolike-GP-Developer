@@ -14,6 +14,8 @@ import { imageIcon } from 'src/environments/environment';
 export class ImagenPage implements OnInit {
 
   image:string = imageIcon;
+  principalIcon :string = 'cloud-upload';
+  listPrincipalIcon = ['cloud-upload','save'];
 
   selectedPhoto;
   currentImage;
@@ -30,7 +32,9 @@ export class ImagenPage implements OnInit {
   };
 
   ngOnInit() {
-
+    console.log(this.listPrincipalIcon);
+    
+    this.principalIcon = this.listPrincipalIcon[0];
   }
 
   grabPicture() {
@@ -68,5 +72,13 @@ export class ImagenPage implements OnInit {
         }
         return new Blob([new Uint8Array(array)], {type: 'image/jpeg'});
   };
+
+
+  saveImage(){
+    if (this.principalIcon=='save') {
+      console.log('save imgage');
+      
+    }
+  }
 
 }

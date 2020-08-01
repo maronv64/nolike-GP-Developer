@@ -11,10 +11,13 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database'; //realtime
+import { AngularFireAuthModule } from "@angular/fire/auth";
+
 import { environment } from '../environments/environment';
 
 import { Camera } from "@ionic-native/camera/ngx";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ,AngularFireDatabaseModule
     ,FormsModule
     ,ReactiveFormsModule
+    ,AngularFireAuthModule
   ],
   providers: [
     StatusBar,
