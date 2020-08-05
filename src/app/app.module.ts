@@ -19,7 +19,8 @@ import { environment } from '../environments/environment';
 import { Camera } from "@ionic-native/camera/ngx";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComponentsModule } from './components/components.module';
-// import { Came } from "@capacitor/core";
+// import { File } from "@ionic-native/file/ngx/index";
+// import { FileTransfer, FileTransferObject } from "@ionic-native/file-transfer/ngx";
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,6 +36,9 @@ import { ComponentsModule } from './components/components.module';
     ,AngularFireStorageModule
   ],
   providers: [
+    // FileTransfer,       //
+    // FileTransferObject, // 
+    // File  ,             //
     StatusBar,
     SplashScreen,
     Camera,

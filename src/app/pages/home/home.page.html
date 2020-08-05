@@ -13,14 +13,14 @@
   </ion-header> -->
 
   <ion-list>
-    <ion-card *ngFor="let item of [0,1,2,3,4];">
+    <ion-card *ngFor="let item of listFiles">
       <!-- <ion-card-header>
         <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
         <ion-card-title>Awesome Title</ion-card-title>
       </ion-card-header> -->
       <!-- <img alt="Avatar" class="image" style="width:100%"> -->
       <!-- <div class="container"> -->
-        <img alt="Avatar" class="image" style="width:100%">
+        <img [src]="item.ruta" alt="Avatar" class="image" style="width:100%">
       <!-- </div> -->
 
 

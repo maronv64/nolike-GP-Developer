@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 import { AngularFirestore } from '@angular/fire/firestore';
-import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
+import { AngularFireDatabase, AngularFireObject, AngularFireList } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 
 // import * as firebase from "firebase/app";
 import { AngularFireStorage } from '@angular/fire/storage';
+import { AuthService } from 'src/app/services/auth.service';
+import { Archivo } from "../../interfaces/todo";
+
+import { Plugins } from "@capacitor/core";
+
+// import {  } from "file-saver";
 
 @Component({
   selector: 'app-home',
@@ -16,18 +22,26 @@ export class HomePage implements OnInit {
 
   items: Observable<any[]>;
   itemRef: AngularFireObject<any>;
-  listFiles =[];
+  itemList : AngularFireList<any>;
+  listFiles : any[] =[];
 
   constructor(
     private firestore: AngularFirestore
     ,private db: AngularFireDatabase
     ,private fire:AngularFireStorage
+    ,private FireBaseService : AuthService
+    // ,private transfer: FileTransfer
+    // , private file: File
     ) {
     // this.items = firestore.collection('items').valueChanges();
+    
   }
+
+  // fileTransfer: FileTransferObject = this.transfer.create();
 
   ngOnInit(){
     this.loadUsers();
+    this.loadFiles();
     // this.loadFiles();
     // this.firestore.firestore.
 
@@ -51,9 +65,45 @@ export class HomePage implements OnInit {
     }).catch((err)=>{}).finally(()=>{});
   }
 
-  loadMyFiles(){
+  loadFiles(){
+
+    // let lista = this.firestore.collection('usuarios').snapshotChanges().subscribe(data=>{data.map(e=>{ console.log(e.payload.doc.data());});
+    // });
+
+    // this.firestore.collection('archivos').snapshotChanges().subscribe(
+    //   data=>{
+    //     data.map(item=>{
+    //       console.log("hhhh",item.payload.doc.data());
+          
+    //     })
+    //   }
+    // );
+
+    // this.firestore.collection('archivos').get().toPromise().then(data=>{
+    //   data.forEach(i=>{
+    //     console.log('hjdkaskdhsakjd',i.data());
+    //   })
+    // })
+
+    // console.log("Lista",lista);
     
+    
+    
+
+    this.FireBaseService._cargarArchivosTodosDeTodos()
+        .then((dataFiles)=>{
+          dataFiles.forEach(item=>{
+            this.listFiles.push( item.data());
+          })
+        }).catch((err)=>{
+
+        }).finally(()=>{
+          console.log("ListaFiles",this.listFiles);
+          
+        });
   }
+
+ 
 
   // loadFiles(){
   //   this.listFiles= [];

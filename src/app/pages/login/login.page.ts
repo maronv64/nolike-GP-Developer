@@ -20,8 +20,8 @@ export class LoginPage implements OnInit {
   ) {
 
     this.ngFormLogin = new FormGroup({
-      _usuario : new FormControl({value:'jorgexo.ox@gmail.com',disabled:false},[Validators.email,Validators.required]),
-      _clave : new FormControl({value:'kiritokun',disabled:false},[Validators.required])
+      _usuario : new FormControl({value:'tito@gmail.com',disabled:false},[Validators.email,Validators.required]),
+      _clave : new FormControl({value:'holahola123',disabled:false},[Validators.required])
     });
 
    }
