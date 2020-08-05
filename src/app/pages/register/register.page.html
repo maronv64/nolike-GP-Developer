@@ -1,9 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
+<ion-header class="ion-no-border" [translucent]="true">
+  <ion-toolbar >
+    <!-- <ion-title>register</ion-title> -->
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="login"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="container">
+    
+    <form (ngSubmit)="register()"  [formGroup]="ngFormRegister">
+      <img [src]="image" alt="">
+      <ion-item >
+        <ion-label position="floating">usuario <ion-text color="danger">*</ion-text> </ion-label>
+        <ion-input formControlName="_usuario" required type="text"></ion-input>
+      </ion-item>
+      <ion-item >
+        <ion-label position="floating">clave <ion-text color="danger">*</ion-text> </ion-label>
+        <ion-input formControlName="_clave" required type="password"></ion-input>
+      </ion-item>
+      <ion-button type="submit" expand="block"  shape="round" [disabled]="ngFormRegister.invalid">
+        Crear Cuenta
+      </ion-button>
+    </form>
+  </div>
 </ion-content>

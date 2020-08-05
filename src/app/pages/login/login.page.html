@@ -1,8 +1,8 @@
-<!-- <ion-header>
+<ion-header class="ion-no-border" [translucent]="true">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <!-- <ion-title>login</ion-title> -->
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
 <ion-content>
   <div class="container">
@@ -20,6 +20,10 @@
       <ion-button type="submit" expand="block"  shape="round" [disabled]="ngFormLogin.invalid">
         Ingresar
       </ion-button>
+     
     </form>
+    <ion-button (click)="navigate()" expand="block" fill="clear" shape="round">
+      Crear una Cuenta
+    </ion-button>
   </div>
 </ion-content>

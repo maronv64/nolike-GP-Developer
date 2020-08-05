@@ -1,27 +1,47 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-searchbar{
+  padding-bottom: 0 !important;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-card{
+  min-height: 10rem !important;
+  // background-image: url('http://1.bp.blogspot.com/-DACTr4b8kH4/Teku1yq5USI/AAAAAAAAC1c/7Uy344nOTWE/s1600/Sasha_Grey_Photos_HZRTAT.jpg');
+  // background-repeat: no-repeat;
+  // background-size: auto 10rem ;
+  img{
+    max-width: 100% !important;
+    // border-radius: 8px;
+    // max-height: 10rem !important;
+    content: url('http://1.bp.blogspot.com/-DACTr4b8kH4/Teku1yq5USI/AAAAAAAAC1c/7Uy344nOTWE/s1600/Sasha_Grey_Photos_HZRTAT.jpg');
+  }
+  
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
 
-  color: #8c8c8c;
+// #container {
+//   text-align: center;
 
-  margin: 0;
-}
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
 
-#container a {
-  text-decoration: none;
-}
+// #container strong {
+//   font-size: 20px;
+//   line-height: 26px;
+// }
+
+// #container p {
+//   font-size: 16px;
+//   line-height: 22px;
+
+//   color: #8c8c8c;
+
+//   margin: 0;
+// }
+
+// #container a {
+//   text-decoration: none;
+// }
+
